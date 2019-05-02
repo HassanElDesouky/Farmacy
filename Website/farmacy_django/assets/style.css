@@ -1,0 +1,237 @@
+/* Background img & gradient */
+body{
+background: linear-gradient(to left ,rgba(142, 68, 173,0.7),rgba(243, 156, 18,0.7)), no-repeat fixed center center;
+background-size:cover;
+}
+/* ======================================================================== */
+/* Welcome & LOGO */
+
+.welcome {
+  display: inline-block;
+  color:#fff;
+  position:absolute;
+  top: 20%;
+  right:32%;
+  text-align: center;
+}
+.SiteLogo {
+  opacity: 1;
+  position:absolute;
+  left:0%;
+  height:100%;
+  bottom: 5%;
+}
+.about {
+  position: fixed;
+  bottom:0%;
+  right:0%;
+  left: 0%;
+  height:10%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 20px;
+padding: 20px;
+
+}
+.about2{
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 100px;
+  border: 2px solid #800080;
+  color: #800080;
+  font-size: 15px;
+  text-align: center;
+
+}
+/* ======================================================================== */
+
+.signInUp {
+  margin-left: 78%;
+  margin-top: 2%;
+
+}
+.stretched-link{
+  color: #ecf0f1;
+}
+.stretched-link:hover {
+  color: #ecf0f1;
+  text-decoration-line:none;
+}
+
+/* Search Box */
+.s006 {
+  background-position: center center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+      min-height: 60vh;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 50px;
+}
+
+
+.s006 form {
+  width: 100%;
+  max-width: 790px;
+}
+
+.s006 form legend {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.s006 form .inner-form {
+  width: 100%;
+  margin-bottom: 17px;
+}
+
+.s006 form .inner-form .input-field {
+  height: 70px;
+  width: 100%;
+  position: relative;
+}
+
+.s006 form .inner-form .input-field input {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: 0px solid #fff;
+  background:linear-gradient(to right ,rgba(142, 68, 173,1),rgba(243, 156, 18,1)) no-repeat fixed ;
+  display: block;
+  width: 100%;
+  padding: 10px 32px 10px 70px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 34px;
+}
+
+.s006 form .inner-form .input-field input:hover, .s006 form .inner-form .input-field input:focus {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(142, 68, 173,0.5);
+  outline: 0;
+}
+
+.s006 form .inner-form .input-field .btn-search {
+  width: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  -ms-flex-pack: center;
+      justify-content: center;
+  align-items: center;
+}
+
+
+
+.s006 form .inner-form .input-field .btn-search:hover, .s006 form .inner-form .input-field .btn-search:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+.s006 form .inner-form .input-field .btn-search svg {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+  transition: all .2s ease-out, color .2s ease-out;
+}
+.s006 form .inner-form .input-field .btn-search:hover svg, .s006 form .inner-form .input-field .btn-search:focus svg {
+  fill: #666;
+}
+@media screen and (max-width: 767px) {
+  .s006 form .inner-form .input-field {
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .s006 form .inner-form .input-field input {
+    padding-left: 55px;
+    font-size: 16px;
+  }
+  .s006 form .inner-form .input-field .btn-search svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+.s006 form .inner-form .input-field input.placeholder {
+  color: #fff;
+  font-size: 18px;
+}
+
+.s006 form .inner-form .input-field input:-moz-placeholder {
+  color: #fff;
+  font-size: 18px;
+}
+
+.s006 form .inner-form .input-field input::-webkit-input-placeholder {
+  color: #ecf0f1;
+  font-size: 18px;
+}
+
+
+/* ======================================================================== */
+
+
+/* Basic Box */
+.basicBox {
+  width: 130px;
+  height: 65px;
+  margin: 15px auto;
+  color: #ecf0f1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15rem;
+  line-height: 65px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.oneb {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.oneb rect, .oneb path, .oneb polyline {
+  fill: none;
+  stroke:#ecf0f1;
+  stroke-width: 3;
+}
+
+.basicBox:hover .oneb rect, .swiggleBox:hover .oneb path, .checkBox:hover .oneb polyline {
+  stroke: #ecf0f1;
+}
+
+.oneb rect {
+  stroke-dasharray: 400, 0;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+.basicBox:hover .oneb rect {
+  stroke-width: 3;
+  stroke-dasharray: 35, 245;
+  stroke-dashoffset: 38;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+/* ======================================================================== */

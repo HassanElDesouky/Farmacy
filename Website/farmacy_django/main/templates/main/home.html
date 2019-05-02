@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      {% load static %}
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="author" content="colorlib.com">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href= "{% static 'style.css' %}", type="text/css">
+      <script type="text/javascript" src="{% static 'js.js' %}">  </script>
+      <title>Farmacy</title>
+      <link rel="icon" href="{% static "imgs/Logo3.png" %}">
+    </head>
+
+    <div>
+          <!--Welcome & LOGO-->
+          <div class="WeLo">
+            <img class="SiteLogo" src="{% static "imgs/Logo4.png" %}">
+          </div>
+            <!--sign in & up-->
+        <div class="signInUp">
+         <div class="basicBox ">
+             <a href="LogIn/index.html" class="stretched-link">
+            Sign in
+             </a>
+           <svg class="oneb" width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+             <rect x='0' y='0' fill='none' width='130' height='65'/>
+           </svg>
+         </div>
+
+         <div class="basicBox">
+            <a href="SignUp/SignUp.html" class="stretched-link">
+           Sign up
+            </a>
+           <svg class="oneb"width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+             <rect x='0' y='0' fill='none' width='130' height='65'/>
+           </svg>
+         </div>
+        </div>
+
+        <!--search Box-->
+        <div class="s006">
+          <form>
+            <fieldset>
+              <div class="inner-form">
+                <div class="input-field ">
+                  <button class="btn-search " type="button">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                    </svg>
+                  </button>
+
+                    <!-- search input -->
+                  <input id="search rounded"
+                         type="text"
+                         placeholder="Search for what you want .."
+                         name="search"
+                         value="" />
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div align="center">
+            {% for med in medicines %}
+            <p> {{ med }}</p>
+            {% endfor %}
+        </div>
+
+        <div class="about">
+        </div>
+        <div class="about2">
+          WE ARE YOUR CRITICAL SEARCH ENGINE
+        </div>
+        </div>
+
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
