@@ -8,6 +8,8 @@
       <meta name="author" content="colorlib.com">
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="stylesheet" href= "{% static 'style.css' %}", type="text/css">
       <script type="text/javascript" src="{% static 'js.js' %}">  </script>
       <title>Farmacy</title>
@@ -15,30 +17,44 @@
     </head>
 
     <div>
+
           <!--Welcome & LOGO-->
           <div class="WeLo">
             <img class="SiteLogo" src="{% static "imgs/Logo4.png" %}">
           </div>
             <!--sign in & up-->
-        <div class="signInUp">
-         <div class="basicBox ">
-             <a href="LogIn/index.html" class="stretched-link">
-            Sign in
-             </a>
-           <svg class="oneb" width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
-             <rect x='0' y='0' fill='none' width='130' height='65'/>
-           </svg>
-         </div>
+        {% if user.is_authenticated %}
+            <div class="signInUp">
+             <div class="basicBox ">
+                 <a href="/account" class="stretched-link"> {{ user.username }} </a>
+               <svg class="oneb" width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+                 <rect x='0' y='0' fill='none' width='130' height='65'/>
+               </svg>
+             </div>
+             <div class="basicBox">
+                <a href="/logout" class="stretched-link"> Logout </a>
+               <svg class="oneb"width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+                 <rect x='0' y='0' fill='none' width='130' height='65'/>
+               </svg>
+             </div>
+            </div>
+        {% else %}
+            <div class="signInUp">
+             <div class="basicBox ">
+                 <a href="/login" class="stretched-link"> Sign in </a>
+               <svg class="oneb" width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+                 <rect x='0' y='0' fill='none' width='130' height='65'/>
+               </svg>
+             </div>
+             <div class="basicBox">
+                <a href="/register" class="stretched-link"> Sign up </a>
+               <svg class="oneb"width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+                 <rect x='0' y='0' fill='none' width='130' height='65'/>
+               </svg>
+             </div>
+            </div>
+        {% endif %}
 
-         <div class="basicBox">
-            <a href="SignUp/SignUp.html" class="stretched-link">
-           Sign up
-            </a>
-           <svg class="oneb"width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
-             <rect x='0' y='0' fill='none' width='130' height='65'/>
-           </svg>
-         </div>
-        </div>
 
         <!--search Box-->
         <div class="s006">
@@ -77,10 +93,14 @@
         </div>
         </div>
 
+            {% include "main/includes/messages.html" %}
 
     </body>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </html>

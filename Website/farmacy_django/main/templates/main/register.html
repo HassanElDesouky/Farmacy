@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<title>Sign up-Farmacy</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static "imgs/Logo3.png" %}">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/SignUp/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/SignUp/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="limiter">
+		<div class="container-login100">
+
+			<div class="Home">
+                <a href="/" class="stretched-link"> HOME </a>
+            </div>
+
+			<div class="wrap-login100">
+				<form method="POST"
+                        class="login100-form validate-form">
+                    {% csrf_token %}
+					<span class="login100-form-title p-b-25"> CREATE ACCOUNT </span>
+
+                        {{ form.as_p }}
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit"
+                                    class="login100-form-btn">
+								sign Up
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-30">
+						<span class="txt1">
+						Already have an account?
+						</span>
+
+						<a class="txt2" href="#">
+							LOGIN HERE
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+        {% include "main/includes/messages.html" %}
+
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js.js' %}"></script>
+
+</body>
+</html>
