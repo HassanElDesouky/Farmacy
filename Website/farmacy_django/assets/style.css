@@ -1,6 +1,6 @@
 /* Background img & gradient */
 body{
-background: linear-gradient(to left ,rgba(142, 68, 173,0.7),rgba(243, 156, 18,0.7)), no-repeat fixed center center;
+background: linear-gradient(to left ,rgba(142, 68, 173,1),rgba(243, 156, 18,1)), no-repeat fixed center center;
 background-size:cover;
 }
 /* ======================================================================== */

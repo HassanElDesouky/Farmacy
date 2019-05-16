@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Medicine(models.Model):
     medicine_name = models.CharField(max_length=200)
     pharmacy_name = models.CharField(max_length=300)

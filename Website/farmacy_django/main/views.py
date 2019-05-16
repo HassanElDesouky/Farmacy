@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from .models import Medicine
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
@@ -65,3 +64,18 @@ def login_request(request):
     return render(request,
                   "main/login.html",
                   {"form": form})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

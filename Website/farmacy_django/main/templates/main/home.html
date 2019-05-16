@@ -26,7 +26,7 @@
         {% if user.is_authenticated %}
             <div class="signInUp">
              <div class="basicBox ">
-                 <a href="/account" class="stretched-link"> {{ user.username }} </a>
+                 <a href="http://127.0.0.1:8000/admin/main/medicine/add/" class="stretched-link"> {{ user.username }} </a>
                <svg class="oneb" width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
                  <rect x='0' y='0' fill='none' width='130' height='65'/>
                </svg>
@@ -80,9 +80,9 @@
           </form>
         </div>
 
-        <div align="center">
+        <div align="center" style="background-color: lightblue;">
             {% for med in medicines %}
-            <p> {{ med }}</p>
+            <p> {{ med }} </p>
             {% endfor %}
         </div>
 
@@ -104,3 +104,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </html>
+
+
+
+
+
+
+
+
+
+
